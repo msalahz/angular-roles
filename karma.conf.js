@@ -4,8 +4,7 @@
 module.exports = function (config) {
     config.set({
         plugins: [
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
+            'karma-phantomjs-launcher',
             'karma-jasmine'
         ],
 
@@ -19,8 +18,8 @@ module.exports = function (config) {
         files: [
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
-            'ng-roles.0.0.3.js',
-            'ng-roles.0.0.3.test.js'
+            'ng-roles.src.js',
+            'ng-roles.test.js'
         ],
 
         // list of files / patterns to exclude
@@ -35,7 +34,7 @@ module.exports = function (config) {
 
 
         // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: false,
+        autoWatch: true,
 
 
         // Start these browsers, currently available:
@@ -46,7 +45,7 @@ module.exports = function (config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
 
         // Continuous Integration mode
